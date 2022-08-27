@@ -1,0 +1,205 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+.navbar,
+footer,
+.project {
+  background-color: var(--dark-color);
+}
+a.nav-link {
+  color: white;
+}
+a.nav-link.active,
+a.nav-link:hover {
+  color: var(--green-color);
+}
+.navbar-toggler {
+  border: 2px solid white;
+  font-size: 25px;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.search {
+  color: var(--green-color);
+  border-left: 1px solid var(--green-color);
+}
+
+.main-btn,
+.main-btn:hover,
+.main-btn:focus {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+  border-color: var(--red-color);
+}
+
+div.landing {
+  height: calc(100vh - 72px);
+  background-color: var(--dark-color);
+}
+.title:after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.allboxes h4 {
+  color: var(--yellow-color);
+}
+.icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.icon-holder {
+  height: 200px;
+}
+.icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.icon-holder .icon {
+  color: var(--green-color);
+}
+.box p {
+  line-height: 30px;
+}
+
+.gallery,
+.team {
+  background-color: var(--section-color);
+}
+
+.gallery li {
+  cursor: pointer;
+}
+.gallery li.active {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+}
+.gallery li:not(.active):hover {
+  color: var(--red-color);
+}
+.card {
+  overflow: hidden;
+  padding: 5px;
+}
+.card::after {
+  content: "";
+  background-color: var(--green-color);
+  width: calc(100% - 3px);
+  height: calc(100% - 10px);
+  position: absolute;
+  left: -1000px;
+  opacity: 90%;
+}
+.card::before {
+  content: "Appliction";
+  position: absolute;
+  color: white;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  font-size: 30px;
+  opacity: 0;
+}
+.card:hover::after {
+  left: 0;
+  animation: LeftToRight 0.2s;
+  -webkit-animation: LeftToRight 0.2s;
+}
+.card:hover::before {
+  opacity: 1;
+  animation: LeftToRight 0.2s;
+  -webkit-animation: LeftToRight 0.2s;
+}
+@keyframes LeftToRight {
+  0% {
+    left: -400px;
+  }
+  100% {
+    left: 0;
+  }
+}
+.des {
+  max-width: 500px;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.discription h2 {
+  color: var(--yellow-color);
+  font-weight: 700;
+}
+.cards h2 {
+  background-color: var(--green-color);
+  color: white;
+}
+.cards img {
+  width: 100%;
+  height: auto;
+}
+
+.blog .cards {
+  border: 1px solid #ddd;
+}
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input {
+  border: none;
+  border-bottom: 1px solid;
+}
+.subscribe input:focus {
+  outline: none;
+}
+.subscribe .main-btn {
+  color: var(--yellow-color);
+  background-color: black;
+  border: black;
+}
+
+footer span:nth-child(1) {
+  color: var(--green-color);
+}
+footer span:nth-child(2) {
+  color: var(--yellow-color);
+}
+.social {
+  width: 20px;
+  height: 20px;
+}
+.social svg:nth-child(1) {
+  background-color: #1877f2;
+}
+.social svg:nth-child(2) {
+  background-color: #1da1f2;
+}
+.social svg:nth-child(3) {
+  background-color: #0077b5;
+}
+.social svg:nth-child(4) {
+  background-color: #ff0000;
+}
+.card img {
+  width: 100%;
+}
